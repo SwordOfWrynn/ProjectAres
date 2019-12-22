@@ -8,6 +8,10 @@ namespace Ares
     {
         [SerializeField]
         Sprite tileSprite;
+        [SerializeField]
+        Sprite tileRamp1Sprite;
+        [SerializeField]
+        Sprite tileCliff5Sprite;
 
         Dictionary<Tile, GameObject> tileToGameObjectDict;
 
@@ -17,9 +21,9 @@ namespace Ares
         void Start()
         {
             tileToGameObjectDict = new Dictionary<Tile, GameObject>();
-            for(int x = 0; x < gameMap.Height; x++)
+            for(int x = 0; x < gameMap.Width; x++)
             {
-                for(int y = 0; y < gameMap.Width; y++)
+                for(int y = 0; y < gameMap.Height; y++)
                 {
                     Tile tileData = gameMap.GetTileAt(x, y);
 
@@ -36,7 +40,20 @@ namespace Ares
 
                     //add a sprite renderer
                     SpriteRenderer sr = tile_GO.AddComponent<SpriteRenderer>();
-                    sr.sprite = tileSprite;
+                    Sprite sprite;
+                    switch (tileData.Type)
+                    {
+                        case (TileType.Ramp1):
+                            sprite = tileRamp1Sprite;
+                            break;
+                        case (TileType.Cliff5):
+                            sprite = tileCliff5Sprite;
+                            break;
+                        default:
+                            sprite = tileSprite;
+                            break;
+                    }
+                    sr.sprite = sprite;
                     sr.sortingLayerName = "Tiles";
 
                     //manually call callback for loading

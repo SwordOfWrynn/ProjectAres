@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Map files are used for both maps and save games, so the GameData element will be present save files only-->
+
+<MapFile>
+	<!--Saves only-->
+	<GameData>
+		<Version></Version>
+		<Mods>
+		</Mods>
+		<Players>
+			<P1>
+				<Faction></Faction>
+			</P1>
+		</Player>
+	</GameData>
+
+	<Map>
+		<Name></Name>
+		<TerrainType></TerrainType>
+		<Tiles>
+		
+		</Tile>
+		<Doodads>
+		
+		</Doodads>
+		<Units>
+		
+		</Units>
+	</Map>
+</MapFile>

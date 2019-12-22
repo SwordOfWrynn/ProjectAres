@@ -10,7 +10,7 @@ namespace Ares
 
         [SerializeField] TileSpriteController m_tileSpriteController;
 
-        public static GameInformation GameInfo { get; protected set; }
+        public static MatchInfo GameInfo { get; protected set; }
 
         public Map GameMap { get; protected set; }
 
@@ -26,7 +26,7 @@ namespace Ares
             Instance = this;
 
             //Testing
-            GameInfo = new GameInformation("", "");
+            GameInfo = new MatchInfo(@"E:\ComputerScience\UnityProjects\ProjectAres\Assets\StreamingAssets\Base\Maps\BasicMap.xml", "");
 
             GameMap = new Map(GameInfo.MapPath);
         }
@@ -37,7 +37,7 @@ namespace Ares
 
         }
 
-        public static void SetGameInfo(GameInformation gameInfo)
+        public static void SetGameInfo(MatchInfo gameInfo)
         {
             GameInfo = gameInfo;
         }

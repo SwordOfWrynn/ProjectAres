@@ -4,15 +4,46 @@ using UnityEngine;
 
 namespace Ares
 {
+    public enum TileType
+    {
+        Ground,
+        //Ramps and cliffs go clockwise 0 at 12:00 (e.g. Ramp0 faces away from cam, ramp6 towards)
+        Ramp1,
+        Ramp3,
+        Ramp5,
+        Ramp7,
+
+        Cliff1,
+        Cliff3,
+        Cliff5,
+        Cliff7,
+    }
+
+    public struct TileInfo
+    {
+        public int X;
+        public int Y;
+        public int TileType;
+
+        public TileInfo(int x, int y, int tileType)
+        {
+            X = x;
+            Y = y;
+            TileType = tileType;
+        }
+    }
+
     public class Tile : WorldObject
     {
         public int X { get; protected set; }
         public int Y { get; protected set; }
+        public TileType Type { get; protected set; }
 
-        public Tile(int x, int y)
+        public Tile(int x, int y, TileType tileType)
         {
             X = x;
             Y = y;
+            Type = tileType;
         }
 
         //Not sure if these should be here or TileSpriteController? or elsewhere?

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<MapFile>
+	<Map>
+		<Name>Basic Map</Name>
+		<TerrainType>0</TerrainType>
+		<Width>2</Width>
+		<Height>2</Height>
+		<Tiles>
+			<Tile0>
+				<X>0</X>
+				<Y>0</Y>
+				<Type>0</Type>
+			</Tile0>
+			<Tile1>
+				<X>1</X>
+				<Y>0</Y>
+				<Type>1</Type>
+			</Tile1>
+			<Tile2>
+				<X>1</X>
+				<Y>1</Y>
+				<Type>1</Type>
+			</Tile2>
+			<Tile3>
+				<X>0</X>
+				<Y>1</Y>
+				<Type>7</Type>
+			</Tile3>
+		</Tiles>
+		<Doodads>
+		
+		</Doodads>
+		<Units>
+		
+		</Units>
+	</Map>
+</MapFile>
