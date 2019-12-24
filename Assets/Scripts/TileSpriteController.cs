@@ -7,6 +7,8 @@ namespace Ares
     public class TileSpriteController : MonoBehaviour
     {
         [SerializeField]
+        Material defaultMaterial;
+        [SerializeField]
         Sprite tileSprite;
         [SerializeField]
         Sprite tileRamp1Sprite;
@@ -55,6 +57,7 @@ namespace Ares
                     }
                     sr.sprite = sprite;
                     sr.sortingLayerName = "Tiles";
+                    sr.material = defaultMaterial;
 
                     //manually call callback for loading
                     //OnTileChanged(tile_data);

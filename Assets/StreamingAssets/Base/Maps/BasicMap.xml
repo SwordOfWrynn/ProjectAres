@@ -15,17 +15,17 @@
 			<Tile1>
 				<X>1</X>
 				<Y>0</Y>
-				<Type>1</Type>
+				<Type>0</Type>
 			</Tile1>
 			<Tile2>
 				<X>1</X>
 				<Y>1</Y>
-				<Type>1</Type>
+				<Type>0</Type>
 			</Tile2>
 			<Tile3>
 				<X>0</X>
 				<Y>1</Y>
-				<Type>7</Type>
+				<Type>0</Type>
 			</Tile3>
 		</Tiles>
 		<Doodads>
