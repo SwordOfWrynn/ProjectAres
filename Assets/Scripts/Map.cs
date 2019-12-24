@@ -32,20 +32,9 @@ namespace Ares
                 type = (TileType)tileInfo.TileType;
                 tiles[tileInfo.X, tileInfo.Y] = new Tile(tileInfo.X, tileInfo.Y, type);
             }
-
-           /* Width = 20;
-            Height = 50;
-            tiles = new Tile[Width, Height];
-
-            for (int x = 0; x < Width; x++)
-            {
-                for (int y = 0; y < Height; y++)
-                {
-                    tiles[x, y] = new Tile(x, y);
-                    //tiles[x, y].RegisterTileTypeChangedCallback(OnTileChanged);
-                }
-            }*/
         }
+
+
 
         public Tile GetTileAt(int x, int y)
         {
@@ -57,9 +46,22 @@ namespace Ares
             return tiles[x, y];
         }
 
-        public void LoadMap(XElement xmlMap)
+        public TileInfo[] GetTileInfo()
         {
+            TileInfo[] tileInfo = new TileInfo[Width * Height];
 
+            int count = 0;
+            for (int x = 0; x < Width; x++)
+            {
+                for(int y = 0; y < Height; y++)
+                {
+                    Tile tile = tiles[x, y];
+                    TileInfo info = new TileInfo(tile.X, tile.Y, (int)tile.Type);
+                    tileInfo[count] = info;
+                }
+            }
+
+            return tileInfo;
         }
 
     }

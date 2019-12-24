@@ -42,5 +42,10 @@ namespace Ares
             GameInfo = gameInfo;
         }
 
+        void OnDestroy()
+        {
+            Instance = null;
+        }
+
     }
 }

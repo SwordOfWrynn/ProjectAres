@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?> 
+
+<MapFile>
+  <Map>
+    <Name>TestMap</Name>
+    <TerrainType>0</TerrainType>
+    <Width>2</Width>
+    <Height>2</Height>
+    <Tiles>
+      <Tile>
+        <X>0</X>
+        <Y>0</Y>
+        <Type>0</Type>
+      </Tile>
+      <Tile>
+        <X>0</X>
+        <Y>1</Y>
+        <Type>7</Type>
+      </Tile>
+      <Tile>
+        <X>1</X>
+        <Y>0</Y>
+        <Type>1</Type>
+      </Tile>
+      <Tile>
+        <X>1</X>
+        <Y>1</Y>
+        <Type>2</Type>
+      </Tile>
+    </Tiles>
+  </Map>
+</MapFile>

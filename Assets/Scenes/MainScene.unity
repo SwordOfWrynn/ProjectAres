@@ -251,6 +251,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4279817462370498842, guid: 7957abae519826e479ab5437ce31182f,
+        type: 3}
+      propertyPath: tileSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1828b258f9def1e46bf6c36e50a03f97,
+        type: 3}
+    - target: {fileID: 4279817462370498842, guid: 7957abae519826e479ab5437ce31182f,
+        type: 3}
+      propertyPath: tileRamp1Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5179c901e7ac5cd4eb29f82764c7a9b1,
+        type: 3}
+    - target: {fileID: 4279817462370498842, guid: 7957abae519826e479ab5437ce31182f,
+        type: 3}
+      propertyPath: tileCliff5Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 09a53da8f22b4fd4697d008b48f6a8f6,
+        type: 3}
     - target: {fileID: 4279817462370498843, guid: 7957abae519826e479ab5437ce31182f,
         type: 3}
       propertyPath: m_Name
