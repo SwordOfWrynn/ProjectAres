@@ -56,7 +56,7 @@ namespace Ares
                 for(int y = 0; y < Height; y++)
                 {
                     Tile tile = tiles[x, y];
-                    TileInfo info = new TileInfo(tile.X, tile.Y, (int)tile.Type);
+                    TileInfo info = new TileInfo((int)tile.X, (int)tile.Y, (int)tile.Type);
                     tileInfo[count] = info;
                 }
             }

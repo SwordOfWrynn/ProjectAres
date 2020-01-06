@@ -35,14 +35,14 @@ namespace Ares
 
     public class Tile : WorldObject
     {
-        public int X { get; protected set; }
-        public int Y { get; protected set; }
+        //public int X { get; protected set; }
+        //public int Y { get; protected set; }
         public TileType Type { get; protected set; }
 
-        public Tile(int x, int y, TileType tileType)
+        public Tile(int gridX, int gridY, TileType tileType)
         {
-            X = x;
-            Y = y;
+            X = gridX;
+            Y = gridY;
             Type = tileType;
         }
 

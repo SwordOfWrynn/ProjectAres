@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Faction>
+	
+	<ID></ID>
+
+	<Name></Name>
+	
+	<AllianceID></AllianceID>
+	
+	<StartingBuilding></StartingBuilding>
+	
+	<Units>
+		<UnitOverride>
+			<ReplacedUnit></ReplacedUnit>
+			<NewUnit></NewUnit>
+		</UnitOverride>
+		<UnitRemoved></UnitRemoved>
+		<UnitAdded></UnitAdded>
+	</Units>
+	<Buildings>
+		<BuildingOverride>
+			<ReplacedBuilding></ReplacedBuilding>
+			<NewBuilding></NewBuilding>
+		</BuildingOverride>
+		<BuildingAdded><BuildingAdded>
+	</Buildings>
+
+</Faction>
