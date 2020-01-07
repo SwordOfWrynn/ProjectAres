@@ -65,6 +65,25 @@ namespace Ares
                 }
             }
         }
+
+        //Called whenever a tile is changed
+        void OnTileChanged(Tile tileChanged)
+        {
+            if (tileToGameObjectDict.ContainsKey(tileChanged))
+            {
+                Debug.LogError("TileSpriteController -- OnTileChanged: Tile is not in Dictionary");
+                return;
+            }
+
+            GameObject tileGO = tileToGameObjectDict[tileChanged];
+
+            if (tileGO == null)
+            {
+                Debug.LogError("TileSpriteController-- OnTileChanged: The Time GameObject is null.");
+                return;
+            }
+        }
+
     }
 }    
 

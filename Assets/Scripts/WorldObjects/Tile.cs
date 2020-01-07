@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -39,6 +40,8 @@ namespace Ares
         //public int Y { get; protected set; }
         public TileType Type { get; protected set; }
 
+        Action<Tile> tileChangedCB;
+
         public Tile(int gridX, int gridY, TileType tileType)
         {
             X = gridX;
@@ -64,5 +67,22 @@ namespace Ares
             return (cartX, cartY);
         }
 
+        public void ChangeType(TileType newType)
+        {
+            if(Type != newType)
+            {
+                Type = newType;
+                tileChangedCB?.Invoke(this);
+            }
+        }
+
+        public void RegisterTileTypeChangedCallback(Action<Tile> callback)
+        {
+            tileChangedCB += callback;
+        }
+        public void UnRegisterTileTypeChangedCallback(Action<Tile> callback)
+        {
+            tileChangedCB -= callback;
+        }
     }
 }
