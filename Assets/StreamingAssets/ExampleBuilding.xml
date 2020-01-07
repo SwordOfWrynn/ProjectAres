@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Building>
+	<ID></ID>
+	
+	<Name></Name>
+
+	<Description></Description>
+	
+	<Art>
+		<Main></Main>
+		<Portrait></Portrait>
+	</Art>
+	
+	<BuildTime></BuildTime>
+	
+	<Cost>
+		<Wood></Wood>
+	</Cost>
+	
+</Building>

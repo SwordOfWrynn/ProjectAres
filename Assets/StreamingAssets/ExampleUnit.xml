@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Unit>
+	<ID></ID>
+	
+	<Name></Name>
+	
+	<Description></Description>
+	
+	<Art>
+		<Main></Main>
+		<Portrait></Portrait>
+	</Art>
+	
+	<Health></Health>
+	<Energy></Energy>
+	<Attack></Attack>
+	<Armor></Armor>
+	<Speed></Speed>
+	
+	<Abilities>
+	</Abilities>
+	
+	<TrainTime></TrainTime>
+	
+	<!-- the building that trains the unit-->
+	<Building></Building>
+	
+	<Cost>
+		<Wood></Wood>
+	</Cost>
+</Unit>
