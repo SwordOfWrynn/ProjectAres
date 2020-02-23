@@ -13,25 +13,30 @@ namespace Ares
 
         public int Terrain { get; protected set; }
 
-        Tile[,] tiles;
+        Tile[,] Tiles;
 
         public Map(string mapFilePath)
         {
-            MapLoader loader = new MapLoader(mapFilePath);
-            Width = loader.Width;
-            Height = loader.Height;
-            tiles = new Tile[Width, Height];
+            //Just make a generic test map for now
 
-            foreach(var tileInfo in loader.TilesInfo)
-            {
-                TileType type = TileType.Ground;
+            GenericMap(100, 100);
 
-                if(Enum.IsDefined(typeof(TileType), tileInfo.TileType) == false)
-                    Debug.LogError(string.Format("Map: Invalid TileType! {0} is not valid.", tileInfo.TileType));
+            //MapLoader loader = new MapLoader(mapFilePath);
+            //Width = loader.Width;
+            //Height = loader.Height;
+            //Tiles = new Tile[Width, Height];
 
-                type = (TileType)tileInfo.TileType;
-                tiles[tileInfo.X, tileInfo.Y] = new Tile(tileInfo.X, tileInfo.Y, type);
-            }
+
+            //foreach(var tileInfo in loader.TilesInfo)
+            //{
+            //    TileType type = TileType.Ground;
+
+            //    if(Enum.IsDefined(typeof(TileType), tileInfo.TileType) == false)
+            //        Debug.LogError(string.Format("Map: Invalid TileType! {0} is not valid.", tileInfo.TileType));
+
+            //    type = (TileType)tileInfo.TileType;
+            //    Tiles[tileInfo.X, tileInfo.Y] = new Tile(tileInfo.X, tileInfo.Y, type);
+            //}
         }
 
 
@@ -43,7 +48,7 @@ namespace Ares
                 //Debug.LogError("Tile (" + x + "," + y + ") is out of range");
                 return null;
             }
-            return tiles[x, y];
+            return Tiles[x, y];
         }
 
         public TileInfo[] GetTileInfo()
@@ -55,13 +60,34 @@ namespace Ares
             {
                 for(int y = 0; y < Height; y++)
                 {
-                    Tile tile = tiles[x, y];
+                    Tile tile = Tiles[x, y];
                     TileInfo info = new TileInfo((int)tile.X, (int)tile.Y, (int)tile.Type);
                     tileInfo[count] = info;
                 }
             }
 
             return tileInfo;
+        }
+
+        /// <summary>
+        /// Creates a flat map for testing
+        /// </summary>
+        /// <param name="xSize"></param>
+        /// <param name="ySize"></param>
+        void GenericMap(int xSize, int ySize)
+        {
+            Width = xSize;
+            Height = ySize;
+
+            Tiles = new Tile[xSize, ySize];
+            TileType type = TileType.Ground;
+
+            for (int i = 0; i < xSize; i++) {
+                for (int j = 0; j < ySize; j++)
+                {
+                    Tiles[i, j] = new Tile(i, j, type);
+                }
+            }
         }
 
     }
