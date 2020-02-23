@@ -9,5 +9,7 @@ namespace Ares
         public static WorldManager Instance { get; protected set; }
 
         public virtual Map GameMap { get; protected set; }
+
+        [SerializeField] TileSpriteController m_tileSpriteController;
     }
 }

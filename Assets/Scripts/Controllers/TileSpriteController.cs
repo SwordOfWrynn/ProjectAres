@@ -15,14 +15,14 @@ namespace Ares
         [SerializeField]
         Sprite tileCliff5Sprite;
 
-        Dictionary<Tile, GameObject> tileToGameObjectDict;
+        Dictionary<Tile, GameObject> TileToGameObjectDict;
 
         Map gameMap { get { return GameManager.Instance.GameMap; } }
 
         // Start is called before the first frame update
         void Start()
         {
-            tileToGameObjectDict = new Dictionary<Tile, GameObject>();
+            TileToGameObjectDict = new Dictionary<Tile, GameObject>();
             for(int x = 0; x < gameMap.Width; x++)
             {
                 for(int y = 0; y < gameMap.Height; y++)
@@ -31,7 +31,7 @@ namespace Ares
 
                     GameObject tile_GO = new GameObject();
 
-                    tileToGameObjectDict.Add(tileData, tile_GO);
+                    TileToGameObjectDict.Add(tileData, tile_GO);
 
                     tile_GO.name = "Tile_" + x + "," + y;
 
@@ -69,13 +69,13 @@ namespace Ares
         //Called whenever a tile is changed
         void OnTileChanged(Tile tileChanged)
         {
-            if (tileToGameObjectDict.ContainsKey(tileChanged))
+            if (TileToGameObjectDict.ContainsKey(tileChanged))
             {
                 Debug.LogError("TileSpriteController -- OnTileChanged: Tile is not in Dictionary");
                 return;
             }
 
-            GameObject tileGO = tileToGameObjectDict[tileChanged];
+            GameObject tileGO = TileToGameObjectDict[tileChanged];
 
             if (tileGO == null)
             {
